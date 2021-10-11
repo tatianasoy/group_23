@@ -6,4 +6,9 @@
 	<age>27</age>
 	<pets>2</pets>
 	<salary>5000$</salary>
+	<movie>Harry Potter</movie>
+	<series>Clone</series>
+	<food>mexican tacos</food>
+	<season>summer</season>
+	<country>USA</country>
 </person>
