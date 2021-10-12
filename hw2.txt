@@ -1,0 +1,177 @@
+Как отправить ДЗ на проверку.
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal.
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+4. Создать файл “new.json” 
+Touch new.json
+Git status
+ 
+5. Добавить файл под гит.
+Git add new.json
+Git status
+ 
+6. Закоммитить файл.
+git commit -m "add new.json file"
+
+7. Отправить файл на внешний GitHub репозиторий.
+Git push
+ 
+8. Создать файлы new2.json, new2.xml, new2.txt
+touch new2.json new2.xml new2.txt
+ 
+9. Добавить файлы под гит.
+git add new2.json new2.xml new2.txt
+ 
+10. Закоммитить файлы.
+git commit -m "add new2 .json, .xml, txt files"
+ 
+11. Отправить файлы на внешний GitHub репозиторий.
+Git push
+ 
+12. Отредактировать содержание файла “new2.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата).
+Vim new2.txt
+Insert
+
+surname Andryushina
+name Margarita
+patronymic Nikolaevna
+age 27
+pets 2
+salary 5000$
+
+escape :wq
+
+13. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+Vim new2.json
+insert
+
+{
+"surname":"Andryushina",
+"name":"Margarita",
+"patronymic":"Nikolaevna",
+"age":27,
+"pets":0,
+"salary":"5000$"
+}
+escape : wq
+
+14. Добавить и закоммитить “new2.txt” одной строчкой. 
+git commit -am "add info about myself new2.txt"
+
+15. Добавить и закоммитить “new2.json” одной строчкой. 
+git commit -am "add info about myself new2.json"
+
+16. Отправить изменения на внешний репозиторий.
+push
+ 
+17. Отредактировать содержание файла “new2.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+Vim new2.xml
+insert
+
+<?xml version="1.0"?>
+<person>
+        <surname>Andryushina</surname>
+        <name>Margarita</name>
+        <patronymic>Nikolaevna</patronymic>
+        <age>27</age>
+        <pets>2</pets>
+        <salary>5000$</salary>
+</person>
+
+escape : wq
+
+18. Добавить и закоммитить “new2.xml” одной строчкой. 
+Git commit –am “add info about myself new2.xml”
+
+19. Отправить изменения на внешний репозиторий.
+Git push
+ 
+20. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий
+git add hw1.txt && git commit -m "add hw1.txt file"
+git status
+git push
+
+21. В веб интерфейсе GitHub создать файл new3.txt.
+Add file
+Create new file
+Name your file  new3.txt
+Commit new file
+
+22. Отредактировать в веб интерфейсе содержание файла “new3.txt” - написать информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить).
+Click on the “new3.txt”
+Edit this file
+
+Movie "Harry Potter"
+Series "Clone"
+Food Mexican tacos
+Season Summer
+Country USA
+
+Commit changes   - Add info about preferences
+
+
+23. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Click on the “commit changes”
+
+24. Синхронизировать внешний и локальный репозитории (слить изменения с внешнего репозитория) 
+Git pull
+
+25. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате JSON.
+Click on the “new2.json”
+Edit this file
+
+{
+"surname":"Andryushina",
+"name":"Margarita",
+"patronymic":"Nikolaevna",
+"age":27,
+"pets":2,
+"salary":"5000$",
+"movie":"Harry Potter",
+"series":"Clone",
+"food":"mexican tacos",
+"season":"summer",
+"country":"USA"
+}
+
+Commit changes  - Add my preferences
+
+26. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Click on the “Commit changes”
+ 
+27. Синхронизировать внешний и локальный репозитории 
+Git pull
+
+28. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате XML.
+Click on the “new2.xml”
+Edit this file
+
+<?xml version="1.0"?>
+<person>
+	<surname>Andryushina</surname>
+	<name>Margarita</name>
+	<patronymic>Nikolaevna</patronymic>
+	<age>27</age>
+	<pets>2</pets>
+	<salary>5000$</salary>
+	<movie>Harry Potter</movie>
+	<series>Clone</series>
+	<food>mexican tacos</food>
+	<season>summer</season>
+	<country>USA</country>
+</person>
+
+Commit changes - Add my preferences
+ 
+29. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Click on the “Commit changes”
+ 
+
+30. Синхронизировать внешний и локальный репозитории 
+git pull
+
+
+
