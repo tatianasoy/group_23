@@ -1,5 +1,0 @@
-Movie "Harry Potter"
-Series "Clone"
-Food Mexican tacos
-Season Summer
-Country USA
