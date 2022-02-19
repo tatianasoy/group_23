@@ -1,0 +1,80 @@
+
+Команды ADB
+
+Список подключенных устройств
+adb devices
+
+Зайти в папку с apk
+cd /Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug
+ls -la
+
+Загрузить приложение
+adb install ToDoList.apk
+adb install "/Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug/app-debug.apk"
+
+Найти, где в системе android установлены все приложения
+adb shell 'pm list packages -f'
+
+Найти, где в системе android установлено приложение. Команда покажет путь
+adb shell 'pm list packages -f' | grep todolist
+
+Удалить приложение
+com.android.todolist путь, который показала система(команда выше)
+adb uninstall com.android.todolist
+
+Логи
+
+adb logcat (побегут логи).
+
+Остановить логи
+cntr + C
+
+Очистить логи на устройстве
+adb logcat -c 
+
+Отфильтровать логи, которые нашли
+adb logcat | grep -rnw "todolist"
+
+сохранить логи на компьютер в виде файла
+adb logcat | grep -rnw "todolist" > log_todolist.log
+cntr + c создался в файл
+
+открыть лог macos/windows
+open .
+start .
+
+скриншот приложения
+adb shell screencap /storage/emulated/0/DCIM/123.png
+  
+передача файла через ADB на компьютер
+adb pull /storage/emulated/0/DCIM/124.png /Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug/124.png
+
+скриншот на телефон и автоматом скачать на компьютер
+adb shell screencap /storage/emulated/0/DCIM/125.png && adb pull /storage/emulated/0/DCIM/125.png /Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug/125.png
+
+бекап телефона(например откатить на старую версию. Сделать слепок системы и сохранить на компьютер)
+adb backup -apk -shared- all -f /Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug/backup.ab
+adb restore /android.ab
+ 
+Homework
+
+1. Отобразить подключённый девайс в консоли.
+adb devices
+
+2. Вывести адрес приложения todolist в системе Android
+adb shell 'pm list packages -f' | grep todolist
+
+3. Установить .apk файл приложениия todolist на телефон с компьютера через  ADB
+adb install ToDoList.apk
+
+4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
+adb shell screencap /storage/emulated/0/DCIM/125.png && adb pull /storage/emulated/0/DCIM/125.png /Users/vadimksendzov/Work_2/QA_Course/group_23/AndroidApp/001_ToDoList-master/app/build/outputs/apk/debug/125.png
+
+5. Вывести в консоль логи приложения todolist
+adb logcat
+
+ 6. Скопировать логи приложения todolist на компьютер.
+adb logcat | grep -rnw "todolist" > log_todolist.log
+
+ 7. Удалить приложение todolist с телефона через ADB
+adb uninstall com.android.todolist
